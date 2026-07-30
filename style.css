@@ -1,94 +1,112 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    text-align: center;
-}
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh;
     background:linear-gradient(135deg,#4facfe,#00f2fe);
 }
 
 .card{
-    width:350px;
-    background:#fff;
+    width:90%;
+    max-width:420px;
+    background:#ffffff;
     padding:30px;
     border-radius:20px;
-    text-align:center;
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    text-align:center;
 }
 
-h1{
-    margin-bottom:25px;
-    color:#333;
+.search{
+    display:flex;
+    gap:10px;
 }
 
-input{
-    width:100%;
-    padding:12px;
-    border:2px solid #ddd;
-    border-radius:10px;
-    outline:none;
-    font-size:16px;
-}
-
-input:focus{
-    border-color:#4facfe;
-}
-
-button{
-    width:100%;
-    padding:12px;
-    margin-top:15px;
+.search input{
+    flex:1;
+    padding:14px 18px;
     border:none;
-    border-radius:10px;
-    background:#4facfe;
-    color:white;
+    outline:none;
+    border-radius:30px;
+    background:#ebf5fb;
     font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
 }
 
-button:hover{
+.search button{
+    padding:14px 20px;
+    border:none;
+    border-radius:30px;
+    background:#4facfe;
+    color:#fff;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.search button:hover{
     background:#2196f3;
 }
 
+.error{
+    margin-top:20px;
+    color:red;
+    font-size:16px;
+    display:none;
+}
+
 .weather{
+    display:none;
     margin-top:25px;
 }
 
-.weather h2{
-    font-size:28px;
+.weather-icon{
+    width:130px;
+    margin:10px auto;
+}
+
+.temp{
+    font-size:60px;
+    color:#333;
+    font-weight:bold;
+}
+
+.city{
+    font-size:32px;
+    margin-top:10px;
+    color:#444;
+}
+
+.details{
+    display:flex;
+    justify-content:space-between;
+    margin-top:35px;
+}
+
+.col{
+    display:flex;
+    align-items:center;
+    text-align:left;
+}
+
+.col img{
+    width:40px;
+    margin-right:10px;
+}
+
+.humidity,
+.wind{
+    font-size:22px;
+    font-weight:bold;
     color:#333;
 }
 
-.weather h3{
-    font-size:50px;
-    margin:10px 0;
-    color:#2196f3;
-}
-
-.weather p{
-    font-size:20px;
-    color:#666;
+.col p:last-child{
+    font-size:14px;
+    color:#777;
 }
