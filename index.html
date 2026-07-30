@@ -4,30 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="card">
 
-        <h1>🌤 Weather App</h1>
+        <div class="search">
+            <input type="text" placeholder="Enter City Name" spellcheck="false">
+            <button>Search</button>
+        </div>
 
-        <input type="text" placeholder="Enter City Name">
+        <div class="error" style="display: none;">
+            <p>❌ Invalid City Name</p>
+        </div>
 
-        <button>Search</button>
+        <div class="weather" style="display: none;">
 
-        <div class="weather">
+            <img src="images/clouds.png" class="weather-icon" alt="Weather Icon">
 
-            <h2>Vadodara</h2>
+            <h1 class="temp">22°C</h1>
 
-            <h3>30°C</h3>
+            <h2 class="city">Vadodara</h2>
 
-            <p>☁️ Cloudy</p>
+            <div class="details">
+
+                <div class="col">
+                    <img src="images/humidity.png" alt="Humidity">
+
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="images/wind.png" alt="Wind">
+
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
