@@ -46,16 +46,17 @@ body{
     color:#fff;
     cursor:pointer;
     font-size:16px;
-    transition:.3s;
+    transition:0.3s;
 }
 
 .search button:hover{
     background:#2196f3;
+    transform:scale(1.05);
 }
 
 .error{
     margin-top:20px;
-    color:red;
+    color:#ff3333;
     font-size:16px;
     display:none;
 }
@@ -67,7 +68,8 @@ body{
 
 .weather-icon{
     width:130px;
-    margin:10px auto;
+    display:block;
+    margin:15px auto;
 }
 
 .temp{
@@ -76,10 +78,24 @@ body{
     font-weight:bold;
 }
 
+.feels-like{
+    margin:8px 0;
+    font-size:18px;
+    color:#555;
+    font-weight:500;
+}
+
 .city{
     font-size:32px;
     margin-top:10px;
     color:#444;
+}
+
+.description{
+    text-transform:capitalize;
+    color:#666;
+    font-size:18px;
+    margin:10px 0 20px;
 }
 
 .details{
@@ -111,9 +127,36 @@ body{
     color:#777;
 }
 
-.feels-like{
-    margin-top:8px;
-    font-size:18px;
-    color:#555;
-    font-weight:500;
+@media (max-width:500px){
+
+    .card{
+        width:95%;
+        padding:20px;
+    }
+
+    .temp{
+        font-size:48px;
+    }
+
+    .city{
+        font-size:26px;
+    }
+
+    .details{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .col{
+        justify-content:center;
+    }
+
+    .search{
+        flex-direction:column;
+    }
+
+    .search button{
+        width:100%;
+    }
+
 }
