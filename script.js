@@ -18,6 +18,7 @@ async function checkWeather(city) {
     const data = await response.json();
 
     document.querySelector(".city").innerHTML = data.name;
+
     document.querySelector(".temp").innerHTML =
         Math.round(data.main.temp) + "°C";
 
@@ -26,6 +27,15 @@ async function checkWeather(city) {
 
     document.querySelector(".description").innerHTML =
         data.weather[0].description;
+
+    document.querySelector(".min-temp").innerHTML =
+        Math.round(data.main.temp_min) + "°C";
+
+    document.querySelector(".max-temp").innerHTML =
+        Math.round(data.main.temp_max) + "°C";
+
+    document.querySelector(".pressure").innerHTML =
+        data.main.pressure + " hPa";
 
     document.querySelector(".humidity").innerHTML =
         data.main.humidity + "%";
@@ -48,6 +58,9 @@ async function checkWeather(city) {
     else if (data.weather[0].main == "Mist") {
         weatherIcon.src = "images/mist.png";
     }
+    else {
+        weatherIcon.src = "images/cloud.png";
+    }
 
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
@@ -63,4 +76,5 @@ searchBox.addEventListener("keydown", (event) => {
     }
 });
 
+// Default City
 checkWeather("Vadodara");
