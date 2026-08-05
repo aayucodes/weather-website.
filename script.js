@@ -17,6 +17,8 @@ async function checkWeather(city) {
 
     const data = await response.json();
 
+    console.log(data);
+
     document.querySelector(".city").innerHTML = data.name;
 
     document.querySelector(".temp").innerHTML =
@@ -43,23 +45,48 @@ async function checkWeather(city) {
     document.querySelector(".wind").innerHTML =
         data.wind.speed + " km/h";
 
-    if (data.weather[0].main == "Clouds") {
-        weatherIcon.src = "images/cloud.png";
-    }
-    else if (data.weather[0].main == "Clear") {
-        weatherIcon.src = "images/clear.png";
-    }
-    else if (data.weather[0].main == "Rain") {
-        weatherIcon.src = "images/rain.png";
-    }
-    else if (data.weather[0].main == "Drizzle") {
-        weatherIcon.src = "images/drizzle.png";
-    }
-    else if (data.weather[0].main == "Mist") {
-        weatherIcon.src = "images/mist.png";
-    }
-    else {
-        weatherIcon.src = "images/cloud.png";
+    document.querySelector(".visibility").innerHTML =
+        (data.visibility / 1000) + " km";
+
+    const sunrise = new Date(data.sys.sunrise * 1000);
+    const sunset = new Date(data.sys.sunset * 1000);
+
+    document.querySelector(".sunrise").innerHTML =
+        sunrise.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+    document.querySelector(".sunset").innerHTML =
+        sunset.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
+    switch (data.weather[0].main) {
+
+        case "Clouds":
+            weatherIcon.src = "images/cloud.png";
+            break;
+
+        case "Clear":
+            weatherIcon.src = "images/clear.png";
+            break;
+
+        case "Rain":
+            weatherIcon.src = "images/rain.png";
+            break;
+
+        case "Drizzle":
+            weatherIcon.src = "images/drizzle.png";
+            break;
+
+        case "Mist":
+            weatherIcon.src = "images/mist.png";
+            break;
+
+        default:
+            weatherIcon.src = "images/cloud.png";
     }
 
     document.querySelector(".weather").style.display = "block";
@@ -76,5 +103,4 @@ searchBox.addEventListener("keydown", (event) => {
     }
 });
 
-// Default City
 checkWeather("Vadodara");
