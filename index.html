@@ -7,97 +7,128 @@
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
-    <div class="card">
+<div class="card">
 
-        <div class="search">
+    <div class="search">
 
-            <input
-                type="text"
-                placeholder="Enter City Name"
-                spellcheck="false">
+        <input
+            type="text"
+            placeholder="Enter City Name"
+            spellcheck="false">
 
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
+        <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+    </div>
+
+    <div class="error">
+        <p>❌ Invalid City Name</p>
+    </div>
+
+    <div class="weather">
+
+        <img src="images/cloud.png"
+        class="weather-icon">
+
+        <h1 class="temp">22°C</h1>
+
+        <p class="feels-like">
+            Feels Like: 22°C
+        </p>
+
+        <h2 class="city">
+            Vadodara
+        </h2>
+
+        <p class="description">
+            Cloudy
+        </p>
+
+        <!-- Extra Weather Details -->
+
+        <div class="extra-details">
+
+            <div class="extra-box">
+                <h3 class="min-temp">0°C</h3>
+                <p>Min Temp</p>
+            </div>
+
+            <div class="extra-box">
+                <h3 class="max-temp">0°C</h3>
+                <p>Max Temp</p>
+            </div>
+
+            <div class="extra-box">
+                <h3 class="pressure">0 hPa</h3>
+                <p>Pressure</p>
+            </div>
 
         </div>
 
-        <div class="error">
-            <p>❌ Invalid City Name</p>
-        </div>
+        <!-- Humidity & Wind -->
 
-        <div class="weather">
+        <div class="details">
 
-            <img src="images/cloud.png" class="weather-icon" alt="Weather Icon">
+            <div class="col">
 
-            <h1 class="temp">22°C</h1>
+                <img src="images/humidity.png">
 
-            <p class="feels-like">Feels Like: 22°C</p>
+                <div>
 
-            <h2 class="city">Vadodara</h2>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
 
-            <p class="description">Cloudy</p>
-
-            <!-- Extra Weather Details -->
-
-            <div class="extra-details">
-
-                <div class="extra-box">
-                    <h3 class="min-temp">0°C</h3>
-                    <p>Min Temp</p>
-                </div>
-
-                <div class="extra-box">
-                    <h3 class="max-temp">0°C</h3>
-                    <p>Max Temp</p>
-                </div>
-
-                <div class="extra-box">
-                    <h3 class="pressure">0 hPa</h3>
-                    <p>Pressure</p>
                 </div>
 
             </div>
 
-            <!-- Humidity & Wind -->
+            <div class="col">
 
-            <div class="details">
+                <img src="images/wind.png">
 
-                <div class="col">
+                <div>
 
-                    <img src="images/humidity.png" alt="Humidity">
-
-                    <div>
-                        <p class="humidity">50%</p>
-                        <p>Humidity</p>
-                    </div>
+                    <p class="wind">15 km/h</p>
+                    <p>Wind Speed</p>
 
                 </div>
 
-                <div class="col">
+            </div>
 
-                    <img src="images/wind.png" alt="Wind">
+        </div>
 
-                    <div>
-                        <p class="wind">15 km/h</p>
-                        <p>Wind Speed</p>
-                    </div>
+        <!-- Sunrise Sunset -->
 
-                </div>
+        <div class="sun-details">
 
+            <div class="sun-box">
+                <h3 class="sunrise">--:--</h3>
+                <p>🌅 Sunrise</p>
+            </div>
+
+            <div class="sun-box">
+                <h3 class="sunset">--:--</h3>
+                <p>🌇 Sunset</p>
+            </div>
+
+            <div class="sun-box">
+                <h3 class="visibility">0 km</h3>
+                <p>👁 Visibility</p>
             </div>
 
         </div>
 
     </div>
 
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
