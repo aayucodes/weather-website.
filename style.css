@@ -91,13 +91,35 @@ body{
 }
 
 .description{
-    margin:10px 0 20px;
+    margin:10px 0;
     color:#666;
     text-transform:capitalize;
     font-size:18px;
 }
 
-/* Extra Details */
+/* ===========================
+   Date & Time
+=========================== */
+
+.date-time{
+    margin-bottom:20px;
+}
+
+.date{
+    font-size:17px;
+    font-weight:bold;
+    color:#333;
+}
+
+.time{
+    margin-top:5px;
+    font-size:15px;
+    color:#777;
+}
+
+/* ===========================
+   Extra Details
+=========================== */
 
 .extra-details{
     display:flex;
@@ -124,7 +146,9 @@ body{
     color:#666;
 }
 
-/* Humidity Wind */
+/* ===========================
+   Humidity & Wind
+=========================== */
 
 .details{
     display:flex;
@@ -154,7 +178,9 @@ body{
     color:#777;
 }
 
-/* Sunrise Sunset */
+/* ===========================
+   Sunrise Sunset
+=========================== */
 
 .sun-details{
     display:flex;
@@ -181,7 +207,9 @@ body{
     color:#666;
 }
 
-/* Responsive */
+/* ===========================
+   Responsive
+=========================== */
 
 @media(max-width:500px){
 
