@@ -30,6 +30,23 @@ async function checkWeather(city) {
     document.querySelector(".description").innerHTML =
         data.weather[0].description;
 
+    // Date & Time
+    const today = new Date();
+
+    document.querySelector(".date").innerHTML =
+        today.toLocaleDateString("en-IN", {
+            weekday: "long",
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        });
+
+    document.querySelector(".time").innerHTML =
+        today.toLocaleTimeString("en-IN", {
+            hour: "2-digit",
+            minute: "2-digit"
+        });
+
     document.querySelector(".min-temp").innerHTML =
         Math.round(data.main.temp_min) + "°C";
 
@@ -103,4 +120,5 @@ searchBox.addEventListener("keydown", (event) => {
     }
 });
 
+// Default City
 checkWeather("Vadodara");
