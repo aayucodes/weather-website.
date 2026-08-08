@@ -247,3 +247,21 @@ body{
     }
 
 }
+.location-btn{
+    width:55px !important;
+    height:55px;
+    flex-shrink:0;
+}
+
+.location-btn:hover{
+    background:#16a085 !important;
+}
+
+@media(max-width:500px){
+
+    .location-btn{
+        width:100% !important;
+        border-radius:30px !important;
+    }
+
+}
